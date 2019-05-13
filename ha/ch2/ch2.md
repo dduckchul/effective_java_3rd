@@ -28,15 +28,29 @@ ex) NutritionFacts cocaCola = new NutritionFacts.Builder(240, 8).calories(100).s
 싱글턴(Singleton)이란 인스턴스를 오직 하나만 생성할 수 있는 클래스를 말한다.  
 싱글턴을 만드는 방식은 보통 두가지가 있다.  
 생성자를 private로 감춰두고, 1) 인스턴스에 접근할 수 있는 수단으로 public static 멤버를 final 필드로 지정한다.
-2) 정적 팩터리 메서드를 public static 멤버로 제공한다.   
+2) 정적 팩터리 메서드를 public static 멤버로 제공한다. 3) 열거타입 방식의 싱글턴 - 바람직한 방법   
 * 24,25 싱글턴 클래스 직렬화 역직렬화 잘 모르겠음
-3) 열거타입 방식의 싱글턴 - 바람직한 방법  
 
 ## ITEM4 인스턴스화를 막으려거든 private 생성자를 사용하라
+private 생성자를 추가한다. 
+추가적인 효과로 상속이 불가능해진다.
 
-## ITEM5
-## ITEM6
-## ITEM7 
+
+## ITEM5 자원을 직접 명시하지 말고 의존객체 주입을 사용하라
+사용하는 자원에 따라 동작이 달라지는 클래스에서는 인스턴스를 생성할 때 생성자에 필요한 자원을 넘겨주어 인스턴스를 생성하는것이 좋다.
+* 팩터리 메서드 패턴 : 생성자에 자원팩터리를 넘겨주는 방식. 팩터리는 호출할 때마다 특정 타입의 인스턴스를 반복해서 만들어주는 객체
+
+클래스가 내부적으로 하나 이상의 자원에 의존하고, 그 자원이 클래스 동작에 영향을 준다면 싱글턴과 정적 유틸리티 클래스는 사용하지 않는 것이 좋다. 이 자원들을 클래스가 직접 만들게 해서도 안된다. 대신 필요한 자원을 Dependency Injection
+
+
+## ITEM6 불필요한 객체 생성을 피하라
+똑같은 기능의 객체를 매번 생성하지 말고 객체 하나를 재새용하는것이 빠른고 세련된다.
+* String s = new String("abc") 대신 String s = "abc" 가 더 좋다.
+* s.matchest("정규식") 에서 내부적으로 사용하는 Patten 인스턴스는 한 번 쓰고 버려져서 곧바고 GC 대상이 된다. 게다가 Pattern은 입력받은 값에 대한 유한상태머신(finite state machine)을 만들기 때문에 인스턴스 생성비용이 높다. 성능을 개선하려면 pattern 인스턴스를 static final 로 캐싱해두고 patternInstance.matcher(string).matches() 를 호출해 사용할 수 있다. (32p 예시 참고)
+* 박싱된 기본타입(ex. Long, Integer) 보다는 기본타입(primitive type) 을 사용하자.
+
+## ITEM7 다 쓴 객체 참조를 해제하라
+
 ## ITEM8
 ## ITEM9
 
@@ -46,8 +60,8 @@ ex) NutritionFacts cocaCola = new NutritionFacts.Builder(240, 8).calories(100).s
 * 인스턴스화 불가 (noninstantiable; 아이템4) : 
 * 리플렉션(아이템 65)
 * 24,25 싱글턴 클래스 직렬화 역직렬화 잘 모르겠음
-
-
+* 유한상태머신(finite state machine)
+* 오토 박싱
 
 
 
