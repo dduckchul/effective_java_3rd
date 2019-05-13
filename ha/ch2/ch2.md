@@ -50,9 +50,18 @@ private 생성자를 추가한다.
 * 박싱된 기본타입(ex. Long, Integer) 보다는 기본타입(primitive type) 을 사용하자.
 
 ## ITEM7 다 쓴 객체 참조를 해제하라
+다 쓴 객체를 참조해제 하려면 null 처리 하면 된다.  
+하지만 다 쓴 참조를 해제하는 가장 좋은 방법은 그 참조를 담은 변수를 유효범위 밖으로 밀어내는 것이다. 변수의 범위를 최소가 되게 정의하라. 변수가 쓰이기 직전에 선언하라.
+WeakHashMap weak reference
 
-## ITEM8
-## ITEM9
+## ITEM8 finalizer와 cleaner 사용을 피하라
+객체 소멸자 finalizer와 cleaner는 예측할 수 없고, 느리고, 일반적으로 불필요하다
+제때 실행되어야 하는 작업은 절대 할 수 없고 실행됨을 보장하지 않는다.
+이 내용은 뭔지는 알겠는데 finalizer랑 cleaner 사용을 어떻게 하는지 모른다. 몰라도 되겟지
+
+## ITEM9 try-finally 보다는 try-with-resources를 사용하라
+autoCloseable을 구현한 클래스는 try(InputStream in = new FileInputStream(src);) {} 할 수 있다.
+코드는 더 짧고 분명해지고, 만들어지는 예외 정보도 훨씬 유용하다. 쉽게 자원을 회수 가능하다.
 
 
 ## ?
@@ -62,6 +71,6 @@ private 생성자를 추가한다.
 * 24,25 싱글턴 클래스 직렬화 역직렬화 잘 모르겠음
 * 유한상태머신(finite state machine)
 * 오토 박싱 (Long : long을 오토박싱?_?)
-
+* WeakHashMap weak reference
 
 
