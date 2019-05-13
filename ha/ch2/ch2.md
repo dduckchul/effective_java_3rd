@@ -57,11 +57,11 @@ private 생성자를 추가한다.
 
 ## ?
 * 불변클래스(immutable class; 아이템17)
-* 인스턴스화 불가 (noninstantiable; 아이템4) : 
+* 인스턴스화 불가 (noninstantiable; 아이템4) : 생성자를 private로
 * 리플렉션(아이템 65)
 * 24,25 싱글턴 클래스 직렬화 역직렬화 잘 모르겠음
 * 유한상태머신(finite state machine)
-* 오토 박싱
+* 오토 박싱 (Long : long을 오토박싱?_?)
 
 
 
