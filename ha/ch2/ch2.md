@@ -72,5 +72,5 @@ autoCloseable을 구현한 클래스는 try(InputStream in = new FileInputStream
 * 유한상태머신(finite state machine)
 * 오토 박싱 (Long : long을 오토박싱?_?)
 * WeakHashMap weak reference
-
+* 스트링 빌더와 스트링 버퍼 : 버퍼은 스레드세이프 빌더는 안세이프 빠룸
 
