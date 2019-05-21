@@ -1,6 +1,6 @@
 # 모든 객체의 공통 메서드
 
-Object에서 final이 아닌 메서드(equals, hashCode, toString, clone, finalize)는 모두 재정의(overriding)를 염두에 두고 설계된 것이라 재정의 시 지켜야 하는 일반 규약이 명확히 정의되어 있다.
+Object에서 final이 아닌 메서드(equals, hashCode, toString, clone, finalize)는 모두 재정의(overriding)를 염두에 두고 설계된 것이라 재정의시 지켜야 하는 일반 규약이 명확히 정의되어 있다.
 
 ## 아이템10 / equals는 일반 규약을 지켜 재정의하라
 
@@ -27,18 +27,10 @@ Object에서 final이 아닌 메서드(equals, hashCode, toString, clone, finali
 3. 입력을 올바른 타입으로 형변환한다.
 4. 입력 객체와 자기 자신의 대응되는 '핵심' 필드들이 모두 일치하는지 하나씩 검사한다.
 
-#### 5) equals를 다 구현했다면 세 가지만 자문해보자.
-1. 대칭적인가?
-2. 추이성이 있는가?
-3. 일관적인가?
-
-#### 6) equals 재정의시 주이사항
+#### 5) equals 재정의시 주의사항
 1. equals를 재정의할 땐 hashCode도 반드시 재정의하자.
 2. 필드들의 동치성만 검사해도 equals 규약을 어렵지 않게 지킬 수 있으니 너무 복잡하게 해결하려 들지 말자.
 3. Object 외의 타입을 매개변수로 받는 equals 메서드는 선언하지 말자. (@Override 어노테이션 사용하면 컴파일 되지 않도록 예방 가능)
-
-#### 7) AutoValue
-구글이 만든 AutoValue 프레임워크는 클래스에 어노테이션 하나만 추가하면 메서드들을 알아서 작성해준다.
 
 #### 핵심 정리
 꼭 필요한 경우가 아니면 equals를 재정의하지 말자. 많은 경우에 Object의 equals가 비교를 정확히 수행해준다. 재정의해야 할 때는 그 클래스의 핵심 필드 모두를 빠짐없이, 다섯 가지 규약을 확실히 지켜가며 비교해야 한다.
@@ -53,4 +45,54 @@ Object에서 final이 아닌 메서드(equals, hashCode, toString, clone, finali
 * ex) HashMap은 해시코드가 다른 엔트리끼리는 동치성 비교를 시도조차 하지 않도록 최적화 되어 있다.
 3. equals(Object)가 두 객체를 다르다고 판단했더라도, 두 객체의 hashCode가 서로 다른 값을 반환할 필요는 없다. 단, 다른 객체에 대해서는 다른 값을 반환해야 해시테이블의 성능이 좋아진다.
 
+#### 2) hashCode 재정의 예시
+
+``` java
+// 전형적인 hashCode 메서드 - 최첨단은 아니지만 자바 플랫폼 라이브러리가 사용한 방식과 견줄만하다.
+@Override public int hashCode() {
+    int result = Short.hashCode(areaCode);
+    result = 31 * result + Short.hashCode(prefix);
+    result = 31 * result + Short.hashCode(lineNum);
+    return result;
+}
+
+// Object 클래스의 해시코드를 계산해주는 hash 메서드 - 속도가 느리므로 성능에 민감하지 않은 상황에서만 사용하자.
+@Override public int hashCode() {
+    return Objects.hash(lineNum, prefix, areaCode);
+}
+
+// 캐싱하는 방식 - 지연 초기화 전략을 사용.
+private int hashCode; // 자동으로 0으로 초기화된다.
+
+@Override public int hashCode() {
+    int result = hashCode;
+    if (result == 0) {
+       result = Short.hashCode(areaCode);
+        result = 31 * result + Short.hashCode(prefix);
+        result = 31 * result + Short.hashCode(lineNum);
+        hashCode = result;
+    }
+    return result;
+}
+```
+
+#### 3) hashCode 재정의시 주의사항
+1. 성능을 높인답시고 해시코드를 계산할 때 핵심 필드를 생략해서는 안된다.
+2. hashCode가 반환하는 값의 생성규칙을 API 사용자에게 자세히 공표하지 말자.
+
+#### 핵심 정리
+equals를 재정의 할 때는 hashCode도 반드시 재정의해야 한다. 서로 다른 인스턴스라면 되도록 해시코드도 서로 다르게 구현해야 한다.
+
+## 아이템12 / toString을 항상 재정의하라
+
+1. Object의 기본 toString 메서드 return 값은 '클래스_이름@16진수로_표시한_해시코드'이다.
+2. 모든 하위 클래스에서 이 메서드를 재정의하라는 toString의 규약이 있다.
+3. toString 재정의시 그 객체가 가진 주요 정보 모두를 반환하는 게 좋다.
+4. 포맷을 문서화할지 안할지는 선택이며 무엇이든 의도를 명확히 밝혀야 한다.
+5. toString이 반환한 값에 포함된 정보를 얻어올 수 있는 API를 제공해야 한다. (안그러면 클라이언트가 직접 파싱해야해서 성능이 나빠짐)
+
+#### 핵심 정리
+상위 클래스에서 이미 알맞게 재정의한 경우는 제외하고 모든 구체 클래스에서 Object의 toString을 재정의하자.
+
+## 아이템13 / clone 재정의는 주의해서 진행하라
 
