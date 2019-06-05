@@ -10,8 +10,8 @@
 ### static final 필드라도 참조주소는 수정못하지만 객체는 수정가능하므로 값이 변경될수 있음
 
 ## Item 16. public 클래스에서는 public필드가 아닌 접근자 메서드를 사용하라
-## pubilc클래스에서 필드를 public으로 선언하면 공개API가 되므로 내부 표현방식을 맘대로 수정할 수없다.
-## package-private, private 중첩클래스에서는 필드를 노출한다 하여도 문제가 없다.
+### pubilc클래스에서 필드를 public으로 선언하면 공개API가 되므로 내부 표현방식을 맘대로 수정할 수없다.
+### package-private, private 중첩클래스에서는 필드를 노출한다 하여도 문제가 없다.
 
 ## Item 17. 변경가능성을 최소화하라
 ### 불변클래스란 객체생성후에는 정보가 바뀌지 않는 클래스. String, 기본타입 Boxing클래스, BigDecimal등
