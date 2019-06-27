@@ -14,5 +14,12 @@
 ### <?> 비한정와일드카드, <E extends Number> 한정타입 매개변수, <T extends Comparable<T>> 재귀타입한정
 ### List<? extends Number> 한정적와일드카드 타입, String.class 타입토큰
 
+
 ## Item 27. 비검사 경고를 제거하라
-### 
+### 경고를 제거 할 수 없지만 안전하다는 확신이 들면 @SuppressWarings를 달아 경고를 숨겨라
+### @SuppressWarings가능한 작은 범위에 적용하는것이 좋다. (* 어노테이션은 선언에만 달수 있다.)
+
+# Item 28. 배열보다는 리스트를 사용하라
+## 
+
+
