@@ -42,8 +42,11 @@
 
 ## Item 30. 이왕이면 제네릭 메서드로 만들라
 ### 제네릭 싱클턴 팩터리: 불변객체를 어러 타입으로 활용할때 매개변수에 맞게 객체의 타입을 바꿔주는 메소드
-#### ex> private static applySame<Object> IDENTITY; 
-         public static <T> applySame<T> identityFunction() {
-                            return (applySame<T>) IDENTITY;
-                          }
+##### ex> private static applySame<Object> IDENTITY; 
+#####      public static <T> applySame<T> identityFunction() {
+#####                            return (applySame<T>) IDENTITY;
+#####                          }
+### 스트림 공부가 필요할듯
+### 재귀적 타입한정 타입한정에 자기자긴이 포함된것
+### ex) <E extends Comparable<E>> --> 타입 E는 자기자신과 비교할수있다 (Comparable 인터페이스를 상속한 class만 받겠다)
   
