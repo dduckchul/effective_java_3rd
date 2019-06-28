@@ -22,7 +22,7 @@
 ## Item 28. 배열보다는 리스트를 사용하라
 ### 배열은 공변이기 때문에 제네릭을 사용해도 타입안정성을 보장할수없다.
 ### 따라사 자바에서는 제네릭 배열을 허용하지 않는다.
-##3 * 공변 Sub이 Super의 하위 타입이라면 Sub[]도 Super[]의 하위타입.(공변 함꼐 변한다)
+### * 공변 Sub이 Super의 하위 타입이라면 Sub[]도 Super[]의 하위타입.(공변 함꼐 변한다)
 ### 타입안정성이 보장 받이 못하는 예 (만약 제네릭 배열이 허용된다고 하면)
 #### Object[] objList = new List<String>[1]; objList[0] = new List<Integer>();
 ### 배열은 실체화가 가능하고 제네릭 타입은 실체화가 불가능하다.
@@ -40,4 +40,10 @@
 ### ex> List Ln = new ArrayList<Number>(); List<String> Ls = In; String s = Ls.get(0);
 ### 한정타입매개변수 <E extends Number> 타입 매개변수가 Number의 하위클래스임을 보장함
 
+## Item 30. 이왕이면 제네릭 메서드로 만들라
+### 제네릭 싱클턴 팩터리: 불변객체를 어러 타입으로 활용할때 매개변수에 맞게 객체의 타입을 바꿔주는 메소드
+#### ex> private static applySame<Object> IDENTITY; 
+         public static <T> applySame<T> identityFunction() {
+                            return (applySame<T>) IDENTITY;
+                          }
   
