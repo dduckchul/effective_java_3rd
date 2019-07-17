@@ -50,3 +50,7 @@
 ### 재귀적 타입한정 타입한정에 자기자긴이 포함된것
 ### ex) <E extends Comparable<E>> --> 타입 E는 자기자신과 비교할수있다 (Comparable 인터페이스를 상속한 class만 받겠다)
   
+## Item 31. 한정적 와일드카드를 사용해 API유연성을 높이라
+### 생산자와 소비자 공식을 왜 쓰는걸까? 왜 그럴까? 겟풋원칙 
+### add는 더 큰걸 작은 그릇에 담을수 없고 pop은 더 작은걸 큰 그릇에 담을 수있기 때문에
+http://www.angelikalanger.com/GenericsFAQ/JavaGenericsFAQ.html
