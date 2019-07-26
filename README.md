@@ -54,4 +54,7 @@
 ## 9주차 과제
   * 이펙티브 자바 열거 타입 (207p ~ 236p) Item38 까지 읽어오기
   * 제네릭 컴파일 단계? -> 자바의 정석 예제 있음
+  * 자바 람다식 동영상 강의 및 기초 사용법
+   -- https://programmers.co.kr/learn/courses/9   
+   -- https://futurecreator.github.io/2018/08/26/java-8-streams/
 ### 모임 일자 : 7 / 25 (목)
