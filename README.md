@@ -8,6 +8,8 @@
 1. [한국어 이펙티브 자바 강의 (유튜브 링크)](https://www.youtube.com/watch?v=X7RXP6EI-5E)
 * 자바 메모리 구조 설명
 * https://hoonmaro.tistory.com/19
+* PermGen과 Metaspace 차이점
+* https://yckwon2nd.blogspot.com/2015/03/java8-permanent.html
 --------------------------
 
 ## 1주차 과제 (1 ~ 50P)
