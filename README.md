@@ -7,7 +7,7 @@
 1. [이펙티브 자바 책내 예제코드](https://git.io/fAm6s)
 1. [한국어 이펙티브 자바 강의 (유튜브 링크)](https://www.youtube.com/watch?v=X7RXP6EI-5E)
 * 자바 메모리 구조 설명
-* https://hoonmaro.tistory.com/19
+* https://hoonmaro.tistory.com/19 , https://jeong-pro.tistory.com/148
 * PermGen과 Metaspace 차이점
 * https://yckwon2nd.blogspot.com/2015/03/java8-permanent.html
 --------------------------
