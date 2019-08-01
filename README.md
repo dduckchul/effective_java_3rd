@@ -64,3 +64,11 @@
    * https://programmers.co.kr/learn/courses/9   
    * https://futurecreator.github.io/2018/08/26/java-8-streams/
 ### 모임 일자 : 7 / 26 (금)
+
+## 10주차 과제
+  * 아펙티브 자바 열거타입 (237p ~ 253p) Item41 까지 읽어오기
+  * 자바 객체 생성시 초기화 순서? 생성자 다음 엔 뭘하나?
+  * 자바 스트림 공부
+    * https://programmers.co.kr/learn/courses/9   
+    * https://futurecreator.github.io/2018/08/26/java-8-streams/
+### 모임 일자 : 8 / 2 (금)
