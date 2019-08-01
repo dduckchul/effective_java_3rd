@@ -6,6 +6,10 @@
 1. [Markdown 마크업 언어 간단한 사용법](https://github.com/sejong-interface/Interface_Manual/wiki/Git-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0%233-README.md-%ED%8C%8C%EC%9D%BC-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0!)
 1. [이펙티브 자바 책내 예제코드](https://git.io/fAm6s)
 1. [한국어 이펙티브 자바 강의 (유튜브 링크)](https://www.youtube.com/watch?v=X7RXP6EI-5E)
+* 자바 메모리 구조 설명
+* https://hoonmaro.tistory.com/19 , https://jeong-pro.tistory.com/148
+* PermGen과 Metaspace 차이점
+* https://yckwon2nd.blogspot.com/2015/03/java8-permanent.html
 --------------------------
 
 ## 1주차 과제 (1 ~ 50P)
@@ -49,15 +53,14 @@
 ## 8주차 과제
   * 이펙티브 제네릭 부분 / 자바의 정석 제네릭 부분 복습
   * 문제는 시간되면 공유 
+  * Enum 활용법 
+   * http://woowabros.github.io/tools/2017/07/10/java-enum-uses.html
 ### 모임 일자 : 7 / 18 (목)
 
 ## 9주차 과제
   * 이펙티브 자바 열거 타입 (207p ~ 236p) Item38 까지 읽어오기
   * 제네릭 컴파일 단계? -> 자바의 정석 예제 있음
-### 모임 일자 : 7 / 25 (목)
-
-## 10주차 과제
-  * 아펙티브 자바 열거타입 (237p ~ 253p) Item41 까지 읽어오기
-  * 자바 객체 생성시 초기화 순서? 생성자 다음 엔 뭘하나?
-  * 자바 스트림 공부 (추후 공유해줌)
-### 모임 일자 : 8 / 1 (목)
+  * 자바 람다식 동영상 강의 및 기초 사용법
+   * https://programmers.co.kr/learn/courses/9   
+   * https://futurecreator.github.io/2018/08/26/java-8-streams/
+### 모임 일자 : 7 / 26 (금)
