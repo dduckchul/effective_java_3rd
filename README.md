@@ -54,7 +54,7 @@
   * 이펙티브 제네릭 부분 / 자바의 정석 제네릭 부분 복습
   * 문제는 시간되면 공유 
   * Enum 활용법 
-   * http://woowabros.github.io/tools/2017/07/10/java-enum-uses.html
+    * http://woowabros.github.io/tools/2017/07/10/java-enum-uses.html
 ### 모임 일자 : 7 / 18 (목)
 
 ## 9주차 과제
