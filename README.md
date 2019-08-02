@@ -69,3 +69,9 @@
     * https://programmers.co.kr/learn/courses/9   
     * https://futurecreator.github.io/2018/08/26/java-8-streams/
 ### 모임 일자 : 8 / 2 (금)
+
+## 11주차 과제
+  * 람다와 스트림
+  * 프로그래머스 동영상 강의
+  * + 문제풀이나 사용법 등등.. 예제
+### 모임 일자 : 8 / 7 (수)
