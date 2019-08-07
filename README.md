@@ -10,6 +10,7 @@
 * https://hoonmaro.tistory.com/19 , https://jeong-pro.tistory.com/148
 * PermGen과 Metaspace 차이점
 * https://yckwon2nd.blogspot.com/2015/03/java8-permanent.html
+
 --------------------------
 
 ## 12주차 과제
@@ -20,7 +21,8 @@
   * 람다와 스트림
   * 프로그래머스 동영상 강의
   * + 문제풀이나 사용법 등등.. 예제
-### 모임 일자 : 8 / 7 (수)
+  * 자바 람다 설명 - http://tcpschool.com/java/java_lambda_concept, https://sehoonoverflow.tistory.com/26
+### 모임 일자 : 8 / 7 (수)  
 
 
 # 귀찮으니까 여기서부터 역순으로올림
