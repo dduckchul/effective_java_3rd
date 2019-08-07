@@ -1,0 +1,8 @@
+    
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**" /> 
+            <bean class="ssg.ad.cm.interceptor.UserAuthCheckInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>
+
