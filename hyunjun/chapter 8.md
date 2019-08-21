@@ -20,14 +20,15 @@
 > * 생성자에서 매개변수로 객체를 받는 경우에는 사용자가 참조를 가지고 있으므로 원복객체가 변경될 위험이 있다.
     따라서 생성자에서 매개변수를 받은뒤 복사해서 저장해야 안전하다.
     ex>
-    <code> Period(Date start, Date end) {
+    <code> 
+         Period(Date start, Date end) {
                  this.start = new Date(start.getTime()); this.end = new Date(end.getTime());
                   if (this.start.compare(this.end) > 0)  {
                      throw Exception("시작일이 종료일보다 큽니다.")
                   }
             }
    </code>
-> 여기서 복사후에 검증을 하는 이유는 멀티 스레드 환경에서 검사후 복사하기전에 값이 바뀔수 있으므로
+> * 여기서 복사후에 검증을 하는 이유는 멀티 스레드 환경에서 검사후 복사하기전에 값이 바뀔수 있으므로
    또한 clone으로 복사하면 안됨 Date를 상속한 하위 클래스가 clone을 악으적으로 수정할 수 있기 때문에
 > * 접근자에서도 복사본을 리턴해줘라
     ex>
