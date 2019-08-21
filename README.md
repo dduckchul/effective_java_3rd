@@ -76,8 +76,10 @@
 ## 11주차 과제
   * 람다와 스트림
   * 프로그래머스 동영상 강의
-  * + 문제풀이나 사용법 등등.. 예제
-  * 자바 람다 설명 - http://tcpschool.com/java/java_lambda_concept, https://sehoonoverflow.tistory.com/26
+  * 문제풀이나 사용법 등등.. 예제
+  * 자바 람다 설명 
+    * http://tcpschool.com/java/java_lambda_concept 
+    * https://sehoonoverflow.tistory.com/26
 ### 모임 일자 : 8 / 7 (수)  
 
 ## 12주차 과제
@@ -85,7 +87,7 @@
   * 추후에 다시 학습
 ### 모임 일자 : 8 / 16 (금)
 
-# 13주차 과제
+## 13주차 과제
  * 메서드 ITEM.49 ~ ITEM.52
 ### 모임날짜 8 / 22 (목)
 
