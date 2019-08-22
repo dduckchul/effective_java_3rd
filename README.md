@@ -78,7 +78,7 @@
   * 프로그래머스 동영상 강의
   * 문제풀이나 사용법 등등.. 예제
   * 자바 람다 설명 
-    * http://tcpschool.com/java/java_lambda_concept 
+    * http://tcpschool.com/java/java_lambda_concept, 
     * https://sehoonoverflow.tistory.com/26
 ### 모임 일자 : 8 / 7 (수)  
 
@@ -91,3 +91,6 @@
  * 메서드 ITEM.49 ~ ITEM.52
 ### 모임날짜 8 / 22 (목)
 
+## 14주차 과제
+  * 메서드 ITEM.53 ~ ITEM.56
+### 모임날짜 : 8 / 29 (목)
