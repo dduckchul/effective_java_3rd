@@ -82,5 +82,13 @@
         contentEqual는(StrungBuffer), contentEqual는(StrungBuilder)등이 있지만
         모두 return contentEqual(charSequence cs); 식으로 같은 동작을 하므로 다중정의를 걱정 할 필요가 없다.
 
+# Item 53. 가번인수정의는 신중히 사용하라
+> * 가변인수 메소드는 매개변수의 유효성 검사를 명시적으로 해야하고 가변인수 사용시 매번 배열을 생성해 할당해야 되는 성능 문제도 있다.
+> * 이를 해결하기 위해서는 꼭 필요한 변수는 앞에 따로 선언하고
+    ex> sum(int... args) -> sum(int a, int.. resArgs) 이런식이면 꼭 param 하나는 꼭 넣어야 컴파일됨
+> * 자주 호출되는 인수의 갯수는 미리 정의 해놓자
+    ex> sum함수는 인수가 2개까지일때 호출의 90% 이상이라면
+         sum(int a), sum(int a, int b), sum(int... args)
+       위와 같이 2개까지는 미리 선언하고 나머지 조금 사용되는걸 가변인수 메소드로 처리하도록 하자
 
-
+# Item 54. 
